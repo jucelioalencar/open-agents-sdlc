@@ -1,0 +1,9 @@
+services:
+  orbit-sdlc:
+    environment:
+      KUBECONFIG: /run/kube/config
+    volumes:
+      - type: bind
+        source: ${KUBECONFIG_PATH:?Configure KUBECONFIG_PATH with a host kubeconfig file}
+        target: /run/kube/config
+        read_only: true

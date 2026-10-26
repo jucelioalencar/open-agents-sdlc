@@ -1,0 +1,6 @@
+services:
+  orbit-sdlc:
+    environment:
+      CODEX_HOME: /run/codex
+    volumes:
+      - "${CODEX_AUTH_FILE:?Set CODEX_AUTH_FILE to your local Codex auth.json}:/codex-seed/auth.json:ro"
